@@ -21,8 +21,6 @@ y_prob = model.predict_proba(X_test)[:, 1]  # Probabilités de churn
 
 
 print(f"Accuracy: {accuracy_score(y_test, y_pred):.2f}")
-print(classification_report(y_test, y_pred))
-print(confusion_matrix(y_test, y_pred))
 
 with open("data/churn_model.pkl", "wb") as file:
     pickle.dump(model, file)
